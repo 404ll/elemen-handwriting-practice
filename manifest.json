@@ -1,0 +1,130 @@
+{
+  "problems": [
+    {
+      "id": "array-fill",
+      "title": "手写 Array.prototype.fill",
+      "category": "array",
+      "difficulty": "medium",
+      "tags": ["手写", "原型链"],
+      "entry": "problems/array-fill/code.js",
+      "updatedAt": "2026-05-18"
+    },
+    {
+      "id": "array-map",
+      "title": "手写 Array.prototype.map",
+      "category": "array",
+      "difficulty": "medium",
+      "tags": ["手写", "原型链"],
+      "entry": "problems/array-map/code.js",
+      "updatedAt": "2026-05-18"
+    },
+    {
+      "id": "array-filter",
+      "title": "手写 Array.prototype.filter",
+      "category": "array",
+      "difficulty": "medium",
+      "tags": ["手写", "原型链"],
+      "entry": "problems/array-filter/code.js",
+      "updatedAt": "2026-05-18"
+    },
+    {
+      "id": "array-foreach",
+      "title": "手写 Array.prototype.forEach",
+      "category": "array",
+      "difficulty": "easy",
+      "tags": ["手写", "原型链"],
+      "entry": "problems/array-foreach/code.js",
+      "updatedAt": "2026-05-18"
+    },
+    {
+      "id": "array-reduce",
+      "title": "手写 Array.prototype.reduce",
+      "category": "array",
+      "difficulty": "medium",
+      "tags": ["手写", "原型链"],
+      "entry": "problems/array-reduce/code.js",
+      "updatedAt": "2026-05-18"
+    },
+    {
+      "id": "array-flat",
+      "title": "手写 Array.prototype.flat",
+      "category": "array",
+      "difficulty": "medium",
+      "tags": ["手写", "原型链"],
+      "entry": "problems/array-flat/code.js",
+      "updatedAt": "2026-05-18"
+    },
+    {
+      "id": "object-flat",
+      "title": "手写对象 flatten",
+      "category": "function",
+      "difficulty": "medium",
+      "tags": ["手写", "递归"],
+      "entry": "problems/object-flat/code.js",
+      "updatedAt": "2026-05-18"
+    },
+    {
+      "id": "deep-clone",
+      "title": "手写深拷贝",
+      "category": "function",
+      "difficulty": "hard",
+      "tags": ["手写", "递归"],
+      "entry": "problems/deep-clone/code.js",
+      "updatedAt": "2026-05-18"
+    },
+    {
+      "id": "compose",
+      "title": "手写 compose",
+      "category": "function",
+      "difficulty": "medium",
+      "tags": ["手写", "函数式"],
+      "entry": "problems/compose/code.js",
+      "updatedAt": "2026-05-18"
+    },
+    {
+      "id": "new-operator",
+      "title": "手写 new",
+      "category": "oop",
+      "difficulty": "medium",
+      "tags": ["手写", "OOP"],
+      "entry": "problems/new-operator/code.js",
+      "updatedAt": "2026-05-18"
+    },
+    {
+      "id": "instanceof",
+      "title": "手写 instanceof",
+      "category": "oop",
+      "difficulty": "medium",
+      "tags": ["手写", "OOP"],
+      "entry": "problems/instanceof/code.js",
+      "updatedAt": "2026-05-18"
+    },
+    {
+      "id": "scheduler",
+      "title": "手写调度器 scheduler",
+      "category": "async",
+      "difficulty": "hard",
+      "tags": ["手写", "异步"],
+      "entry": "problems/scheduler/code.js",
+      "updatedAt": "2026-05-18"
+    },
+    {
+      "id": "sequential-scheduler",
+      "title": "手写顺序调度器",
+      "category": "async",
+      "difficulty": "hard",
+      "tags": ["手写", "异步"],
+      "entry": "problems/sequential-scheduler/code.js",
+      "updatedAt": "2026-05-18"
+    },
+    {
+      "id": "virtual-list",
+      "title": "手写虚拟列表 virtualList",
+      "category": "react",
+      "difficulty": "hard",
+      "tags": ["React", "性能"],
+      "entry": "problems/virtual-list/code.jsx",
+      "updatedAt": "2026-05-18"
+    }
+  ]
+}
