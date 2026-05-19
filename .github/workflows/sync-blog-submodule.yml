@@ -1,0 +1,57 @@
+# 练习仓 push 后，自动给 Elemen-blog 开 PR，更新 practice 子模块指针
+name: Sync blog practice submodule
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  bump-blog-submodule:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout practice repository
+        uses: actions/checkout@v4
+
+      - name: Create bump PR on Elemen-blog
+        env:
+          GH_TOKEN: ${{ secrets.BLOG_REPO_TOKEN }}
+          PRACTICE_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+
+          if [ -z "${GH_TOKEN}" ]; then
+            echo "::error::请在仓库 Settings → Secrets 添加 BLOG_REPO_TOKEN"
+            exit 1
+          fi
+
+          git clone "https://x-access-token:${GH_TOKEN}@github.com/404ll/Elemen-blog.git" blog
+          cd blog
+
+          git submodule update --init practice
+          cd practice
+          git fetch origin main
+          git checkout "${PRACTICE_SHA}"
+          cd ..
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add practice
+          if git diff --staged --quiet; then
+            echo "博客已指向 ${PRACTICE_SHA}，无需 PR。"
+            exit 0
+          fi
+
+          BRANCH="chore/sync-practice-${GITHUB_RUN_ID}"
+          git checkout -b "${BRANCH}"
+          git commit -m "chore: sync practice submodule to ${PRACTICE_SHA:0:7}"
+
+          git push origin "${BRANCH}"
+
+          gh pr create \
+            --repo "404ll/Elemen-blog" \
+            --title "chore: sync practice submodule" \
+            --body "自动同步练习仓提交 [\`${PRACTICE_SHA:0:7}\`](https://github.com/404ll/elemen-handwriting-practice/commit/${PRACTICE_SHA})。" \
+            --base main \
+            --head "${BRANCH}"
