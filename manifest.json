@@ -125,6 +125,15 @@
       "tags": ["React", "性能"],
       "entry": "problems/virtual-list/code.jsx",
       "updatedAt": "2026-05-18"
+    },
+    {
+      "id": "parasitic-combine",
+      "title": "寄生组合继承",
+      "category": "oop",
+      "difficulty": "medium",
+      "tags": ["手写", "OOP", "继承"],
+      "entry": "problems/parasitic-combine/code.js",
+      "updatedAt": "2026-05-19"
     }
   ]
 }
