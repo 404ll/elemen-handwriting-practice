@@ -49,9 +49,12 @@ jobs:
 
           git push origin "${BRANCH}"
 
-          gh pr create \
+          PR_URL=$(gh pr create \
             --repo "404ll/Elemen-blog" \
             --title "chore: sync practice submodule" \
             --body "自动同步练习仓提交 [\`${PRACTICE_SHA:0:7}\`](https://github.com/404ll/elemen-handwriting-practice/commit/${PRACTICE_SHA})。" \
             --base main \
-            --head "${BRANCH}"
+            --head "${BRANCH}" \
+            --json url -q .url)
+
+          gh pr merge "$PR_URL" --auto --squash
