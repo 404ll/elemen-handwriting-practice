@@ -134,6 +134,15 @@
       "tags": ["手写", "OOP", "继承"],
       "entry": "problems/parasitic-combine/code.js",
       "updatedAt": "2026-05-19"
+    },
+    {
+      "id": "array-to-tree",
+      "title": "手写数组转树",
+      "category": "function",
+      "difficulty": "medium",
+      "tags": ["手写", "树", "递归"],
+      "entry": "problems/array-to-tree/code.js",
+      "updatedAt": "2026-05-22"
     }
   ]
 }
