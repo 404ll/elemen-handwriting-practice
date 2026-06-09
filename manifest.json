@@ -143,6 +143,15 @@
       "tags": ["手写", "树", "递归"],
       "entry": "problems/array-to-tree/code.js",
       "updatedAt": "2026-05-22"
+    },
+    {
+      "id": "addEventListener",
+      "title": "手写 EventEmitter",
+      "category": "event",
+      "difficulty": "medium",
+      "tags": ["手写", "发布订阅", "事件"],
+      "entry": "problems/addEventListener/code.js",
+      "updatedAt": "2026-06-09"
     }
   ]
 }
