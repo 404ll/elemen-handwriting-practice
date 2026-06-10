@@ -2,8 +2,10 @@
 
 前端手写题题库，通过 git submodule 挂载到 [Elemen-blog](https://github.com/404ll/Elemen-blog) 的 `practice/`。
 
-- `manifest.json` — 题目索引
-- `problems/<id>/code.js` — 参考实现源码
+- `manifest.json` — 题目索引和分组元数据
+- `problems/<id>/code.js` / `problems/<id>/code.jsx` — 参考实现源码
+- `problems/<id>/article.md` — 题目讲解正文（可选）
+- `problems/<id>/prompt.md` — 提示词与复用文案（可选）
 
 ## 自动同步到博客（推荐）
 
@@ -23,7 +25,7 @@
 ### 日常流程
 
 ```text
-改 problems/ 或 manifest.json → git push origin main
+改 `problems/`、`manifest.json`、`article.md` 或 `prompt.md` → `git push origin main`
   → 博客仓出现 PR → 合并 → Vercel 部署
 ```
 

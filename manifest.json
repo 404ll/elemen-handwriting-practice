@@ -1,9 +1,54 @@
 {
+  "groups": [
+    {
+      "id": "array",
+      "title": "数组",
+      "description": "手写数组原型方法与常见数组处理",
+      "order": 10
+    },
+    {
+      "id": "function",
+      "title": "函数",
+      "description": "递归、组合与数据转换相关的函数题",
+      "order": 20
+    },
+    {
+      "id": "oop",
+      "title": "面向对象",
+      "description": "构造函数、原型链与继承相关题目",
+      "order": 30
+    },
+    {
+      "id": "async",
+      "title": "异步控制",
+      "description": "防抖、调度器、请求取消等异步控制题",
+      "order": 40
+    },
+    {
+      "id": "promise",
+      "title": "Promise",
+      "description": "Promise 及其组合题",
+      "order": 50
+    },
+    {
+      "id": "event",
+      "title": "事件",
+      "description": "发布订阅与事件系统相关题目",
+      "order": 60
+    },
+    {
+      "id": "react",
+      "title": "React",
+      "description": "React 性能与列表渲染相关题目",
+      "order": 70
+    }
+  ],
   "problems": [
     {
       "id": "array-fill",
-      "title": "手写 Array.prototype.fill",
       "category": "array",
+      "groupId": "array",
+      "title": "手写 Array.prototype.fill",
       "difficulty": "medium",
       "tags": ["手写", "原型链"],
       "entry": "problems/array-fill/code.js",
@@ -11,8 +56,9 @@
     },
     {
       "id": "array-map",
-      "title": "手写 Array.prototype.map",
       "category": "array",
+      "groupId": "array",
+      "title": "手写 Array.prototype.map",
       "difficulty": "medium",
       "tags": ["手写", "原型链"],
       "entry": "problems/array-map/code.js",
@@ -20,8 +66,9 @@
     },
     {
       "id": "array-filter",
-      "title": "手写 Array.prototype.filter",
       "category": "array",
+      "groupId": "array",
+      "title": "手写 Array.prototype.filter",
       "difficulty": "medium",
       "tags": ["手写", "原型链"],
       "entry": "problems/array-filter/code.js",
@@ -29,8 +76,9 @@
     },
     {
       "id": "array-foreach",
-      "title": "手写 Array.prototype.forEach",
       "category": "array",
+      "groupId": "array",
+      "title": "手写 Array.prototype.forEach",
       "difficulty": "easy",
       "tags": ["手写", "原型链"],
       "entry": "problems/array-foreach/code.js",
@@ -38,8 +86,9 @@
     },
     {
       "id": "array-reduce",
-      "title": "手写 Array.prototype.reduce",
       "category": "array",
+      "groupId": "array",
+      "title": "手写 Array.prototype.reduce",
       "difficulty": "medium",
       "tags": ["手写", "原型链"],
       "entry": "problems/array-reduce/code.js",
@@ -47,8 +96,9 @@
     },
     {
       "id": "array-flat",
-      "title": "手写 Array.prototype.flat",
       "category": "array",
+      "groupId": "array",
+      "title": "手写 Array.prototype.flat",
       "difficulty": "medium",
       "tags": ["手写", "原型链"],
       "entry": "problems/array-flat/code.js",
@@ -56,8 +106,9 @@
     },
     {
       "id": "object-flat",
-      "title": "手写对象 flatten",
       "category": "function",
+      "groupId": "function",
+      "title": "手写对象 flatten",
       "difficulty": "medium",
       "tags": ["手写", "递归"],
       "entry": "problems/object-flat/code.js",
@@ -65,8 +116,9 @@
     },
     {
       "id": "deep-clone",
-      "title": "手写深拷贝",
       "category": "function",
+      "groupId": "function",
+      "title": "手写深拷贝",
       "difficulty": "hard",
       "tags": ["手写", "递归"],
       "entry": "problems/deep-clone/code.js",
@@ -74,8 +126,9 @@
     },
     {
       "id": "compose",
-      "title": "手写 compose",
       "category": "function",
+      "groupId": "function",
+      "title": "手写 compose",
       "difficulty": "medium",
       "tags": ["手写", "函数式"],
       "entry": "problems/compose/code.js",
@@ -83,8 +136,9 @@
     },
     {
       "id": "new-operator",
-      "title": "手写 new",
       "category": "oop",
+      "groupId": "oop",
+      "title": "手写 new",
       "difficulty": "medium",
       "tags": ["手写", "OOP"],
       "entry": "problems/new-operator/code.js",
@@ -92,8 +146,9 @@
     },
     {
       "id": "instanceof",
-      "title": "手写 instanceof",
       "category": "oop",
+      "groupId": "oop",
+      "title": "手写 instanceof",
       "difficulty": "medium",
       "tags": ["手写", "OOP"],
       "entry": "problems/instanceof/code.js",
@@ -101,8 +156,9 @@
     },
     {
       "id": "scheduler",
-      "title": "手写调度器 scheduler",
       "category": "async",
+      "groupId": "async",
+      "title": "手写调度器 scheduler",
       "difficulty": "hard",
       "tags": ["手写", "异步"],
       "entry": "problems/scheduler/code.js",
@@ -110,8 +166,9 @@
     },
     {
       "id": "sequential-scheduler",
-      "title": "手写顺序调度器",
       "category": "async",
+      "groupId": "async",
+      "title": "手写顺序调度器",
       "difficulty": "hard",
       "tags": ["手写", "异步"],
       "entry": "problems/sequential-scheduler/code.js",
@@ -119,8 +176,9 @@
     },
     {
       "id": "virtual-list",
-      "title": "手写虚拟列表 virtualList",
       "category": "react",
+      "groupId": "react",
+      "title": "手写虚拟列表 virtualList",
       "difficulty": "hard",
       "tags": ["React", "性能"],
       "entry": "problems/virtual-list/code.jsx",
@@ -128,8 +186,9 @@
     },
     {
       "id": "parasitic-combine",
-      "title": "寄生组合继承",
       "category": "oop",
+      "groupId": "oop",
+      "title": "寄生组合继承",
       "difficulty": "medium",
       "tags": ["手写", "OOP", "继承"],
       "entry": "problems/parasitic-combine/code.js",
@@ -137,8 +196,9 @@
     },
     {
       "id": "array-to-tree",
-      "title": "手写数组转树",
       "category": "function",
+      "groupId": "function",
+      "title": "手写数组转树",
       "difficulty": "medium",
       "tags": ["手写", "树", "递归"],
       "entry": "problems/array-to-tree/code.js",
@@ -146,12 +206,35 @@
     },
     {
       "id": "addEventListener",
-      "title": "手写 EventEmitter",
       "category": "event",
+      "groupId": "event",
+      "title": "手写 EventEmitter",
       "difficulty": "medium",
       "tags": ["手写", "发布订阅", "事件"],
       "entry": "problems/addEventListener/code.js",
       "updatedAt": "2026-06-09"
+    },
+    {
+      "id": "promise-all",
+      "category": "promise",
+      "groupId": "promise",
+      "title": "手写 Promise.all",
+      "difficulty": "medium",
+      "tags": ["手写", "Promise", "异步"],
+      "entry": "problems/promise-all/code.js",
+      "updatedAt": "2026-06-10"
+    },
+    {
+      "id": "debounce",
+      "category": "async",
+      "groupId": "async",
+      "title": "手写防抖 debounce",
+      "difficulty": "medium",
+      "tags": ["手写", "异步", "性能"],
+      "entry": "problems/debounce/code.js",
+      "article": "problems/debounce/article.md",
+      "prompt": "problems/debounce/prompt.md",
+      "updatedAt": "2026-06-10"
     }
   ]
 }

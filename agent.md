@@ -1,0 +1,39 @@
+# 题库协作约定
+
+这个仓库是前端手写题的内容源，会通过 `manifest.json` 同步到博客仓库的 `practice/`。
+
+## 索引规则
+
+- `manifest.json` 是索引入口
+- `groups` 描述模块，`problems` 描述具体题目
+- 每个题目都应该带 `groupId`
+- `Promise` 系列题统一挂到 `promise` 分组下面
+- `async` 分组放防抖、调度器、请求取消这类异步控制题
+
+## 题目文件规则
+
+- `problems/<id>/code.js` 或 `problems/<id>/code.jsx` 放参考实现
+- 长讲解不要堆在代码文件顶部
+- 代码文件只保留和逻辑强相关的短注释
+- 适合博客展示的长说明放到 `problems/<id>/article.md`
+- 适合复用生成内容的提示词放到 `problems/<id>/prompt.md`
+
+## 写作规则
+
+- 先讲概念，再讲流程，再讲代码
+- 能拆成多个模块就拆，不要把一篇文章写成单段长文
+- 搜索、防抖、请求取消这类内容，优先用时序和状态变化解释
+- 如果某题是系列题，先给系列分组，再逐步补子题
+
+## 维护规则
+
+- 新增题目时，同步更新 `manifest.json`
+- 如果题目有长说明，就创建对应的 `article.md`
+- 如果题目需要可复用提示词，就创建对应的 `prompt.md`
+- 如果模块定义发生变化，先改 `agent.md`，再改内容文件
+
+## 当前约定示例
+
+- `debounce` 已拆成讲解正文和提示词
+- `promise-all` 已归入 `promise` 分组
+- 后续可以继续补 `promise-race`、`promise-all-settled`、`promise-any` 等子题
