@@ -205,13 +205,13 @@
       "updatedAt": "2026-05-22"
     },
     {
-      "id": "addEventListener",
+      "id": "add-event-listener",
       "category": "function",
       "groupId": "event",
       "title": "手写 EventEmitter",
       "difficulty": "medium",
       "tags": ["手写", "发布订阅", "事件"],
-      "entry": "problems/addEventListener/code.js",
+      "entry": "problems/add-event-listener/code.js",
       "updatedAt": "2026-06-09"
     },
     {
