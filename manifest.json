@@ -206,7 +206,7 @@
     },
     {
       "id": "addEventListener",
-      "category": "event",
+      "category": "function",
       "groupId": "event",
       "title": "手写 EventEmitter",
       "difficulty": "medium",
@@ -216,7 +216,7 @@
     },
     {
       "id": "promise-all",
-      "category": "promise",
+      "category": "async",
       "groupId": "promise",
       "title": "手写 Promise.all",
       "difficulty": "medium",
