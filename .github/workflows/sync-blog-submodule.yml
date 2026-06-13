@@ -56,4 +56,4 @@ jobs:
             --base main \
             --head "${BRANCH}")
 
-          gh pr merge "$PR_URL" --auto --squash
+          gh pr merge "$PR_URL" --squash --delete-branch
