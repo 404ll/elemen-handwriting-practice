@@ -155,6 +155,16 @@
       "updatedAt": "2026-05-18"
     },
     {
+      "id": "object-create",
+      "category": "oop",
+      "groupId": "oop",
+      "title": "手写 Object.create",
+      "difficulty": "medium",
+      "tags": ["手写", "OOP", "原型链"],
+      "entry": "problems/object-create/code.js",
+      "updatedAt": "2026-06-16"
+    },
+    {
       "id": "scheduler",
       "category": "async",
       "groupId": "async",
