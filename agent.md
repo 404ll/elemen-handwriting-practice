@@ -15,8 +15,8 @@
 - `problems/<id>/code.js` 或 `problems/<id>/code.jsx` 放参考实现
 - 长讲解不要堆在代码文件顶部
 - 代码文件只保留和逻辑强相关的短注释
-- 适合博客展示的长说明放到 `problems/<id>/article.md`
-- 适合复用生成内容的提示词放到 `problems/<id>/prompt.md`
+- 适合博客展示的笔记、场景说明、组件片段放到 `problems/<id>/article.md`
+- 不再维护面向博客展示的 `prompt.md`
 
 ## 写作规则
 
@@ -28,12 +28,11 @@
 ## 维护规则
 
 - 新增题目时，同步更新 `manifest.json`
-- 如果题目有长说明，就创建对应的 `article.md`
-- 如果题目需要可复用提示词，就创建对应的 `prompt.md`
+- 如果题目有笔记、场景说明或组件片段，就创建对应的 `article.md`
 - 如果模块定义发生变化，先改 `agent.md`，再改内容文件
 
 ## 当前约定示例
 
-- `debounce` 已拆成讲解正文和提示词
+- `debounce` 已拆成源码练习和笔记记录
 - `promise-all` 已归入 `promise` 分组
 - 后续可以继续补 `promise-race`、`promise-all-settled`、`promise-any` 等子题

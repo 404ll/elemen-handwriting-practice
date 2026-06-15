@@ -233,7 +233,6 @@
       "tags": ["手写", "异步", "性能"],
       "entry": "problems/debounce/code.js",
       "article": "problems/debounce/article.md",
-      "prompt": "problems/debounce/prompt.md",
       "updatedAt": "2026-06-10"
     }
   ]
