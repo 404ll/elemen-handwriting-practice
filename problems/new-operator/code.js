@@ -1,8 +1,8 @@
 function myNew(Constructor, ...args){
     const obj = Object.create(Constructor.prototype)
-    //执行构造函数
+    //立即执行构造函数
     const result = Constructor.apply(obj, args)
-
+    //如果构造函数显式返回对象，则 new 返回这个对象
     return (result !== null &&( typeof result === 'object' || typeof result === 'function')) ? result : obj
 }
 
