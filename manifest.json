@@ -135,6 +135,26 @@
       "updatedAt": "2026-05-18"
     },
     {
+      "id": "apply-bind-call",
+      "category": "function",
+      "groupId": "function",
+      "title": "手写 apply / call / bind",
+      "difficulty": "medium",
+      "tags": ["手写", "函数", "this"],
+      "entry": "problems/apply-bind-call/code.js",
+      "updatedAt": "2026-06-17"
+    },
+    {
+      "id": "curry",
+      "category": "function",
+      "groupId": "function",
+      "title": "手写 curry",
+      "difficulty": "medium",
+      "tags": ["手写", "函数式", "闭包"],
+      "entry": "problems/curry/code.js",
+      "updatedAt": "2026-06-17"
+    },
+    {
       "id": "new-operator",
       "category": "oop",
       "groupId": "oop",
