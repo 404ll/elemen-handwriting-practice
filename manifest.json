@@ -265,6 +265,16 @@
       "updatedAt": "2026-06-10"
     },
     {
+      "id": "promise-race",
+      "category": "async",
+      "groupId": "promise",
+      "title": "手写 Promise.race",
+      "difficulty": "medium",
+      "tags": ["手写", "Promise", "异步"],
+      "entry": "problems/promise-race/code.js",
+      "updatedAt": "2026-06-18"
+    },
+    {
       "id": "debounce",
       "category": "async",
       "groupId": "async",
