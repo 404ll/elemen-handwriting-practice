@@ -155,6 +155,16 @@
       "updatedAt": "2026-06-17"
     },
     {
+      "id": "partial",
+      "category": "function",
+      "groupId": "function",
+      "title": "手写 partial",
+      "difficulty": "easy",
+      "tags": ["手写", "函数式", "闭包"],
+      "entry": "problems/partial/code.js",
+      "updatedAt": "2026-06-17"
+    },
+    {
       "id": "new-operator",
       "category": "oop",
       "groupId": "oop",
