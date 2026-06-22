@@ -275,6 +275,37 @@
       "updatedAt": "2026-06-18"
     },
     {
+      "id": "promise-any",
+      "category": "async",
+      "groupId": "promise",
+      "title": "手写 Promise.any",
+      "difficulty": "medium",
+      "tags": ["手写", "Promise", "异步"],
+      "entry": "problems/promise-any/code.js",
+      "updatedAt": "2026-06-19"
+    },
+    {
+      "id": "promise-allSettled",
+      "category": "async",
+      "groupId": "promise",
+      "title": "手写 Promise.allSettled",
+      "difficulty": "medium",
+      "tags": ["手写", "Promise", "异步"],
+      "entry": "problems/promise-allSettled/code.js",
+      "updatedAt": "2026-06-19"
+    },
+    {
+      "id": "promise-map",
+      "category": "async",
+      "groupId": "promise",
+      "title": "手写 Promise.map",
+      "difficulty": "medium",
+      "tags": ["手写", "Promise", "异步", "并发控制"],
+      "entry": "problems/promise-map/code.js",
+      "article": "problems/promise-map/note.md",
+      "updatedAt": "2026-06-22"
+    },
+    {
       "id": "debounce",
       "category": "async",
       "groupId": "async",
