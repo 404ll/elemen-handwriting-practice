@@ -306,6 +306,28 @@
       "updatedAt": "2026-06-22"
     },
     {
+      "id": "request-retry",
+      "category": "async",
+      "groupId": "async",
+      "title": "手写请求重试机制",
+      "difficulty": "medium",
+      "tags": ["手写", "异步", "请求", "重试", "指数退避"],
+      "entry": "problems/request-retry/code.js",
+      "article": "problems/request-retry/note.md",
+      "updatedAt": "2026-06-23"
+    },
+    {
+      "id": "request-serial",
+      "category": "async",
+      "groupId": "async",
+      "title": "手写请求串行执行",
+      "difficulty": "easy",
+      "tags": ["手写", "异步", "请求", "串行"],
+      "entry": "problems/request-serial/code.js",
+      "article": "problems/request-serial/note.md",
+      "updatedAt": "2026-06-23"
+    },
+    {
       "id": "debounce",
       "category": "async",
       "groupId": "async",
