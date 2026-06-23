@@ -4,12 +4,37 @@
  * @returns {Promise<Array>} 所有任务结果，顺序和 tasks 一致
  */
 
+//这里我认为和并发的区别是runNext的调用时机，串行在每个任务完成后才调用，而并发则是同时调用多个任务
 function requestSerial(tasks) {
-  // TODO: 实现请求串行执行
-  // 1. 按数组顺序依次执行每一个 task
-  // 2. 前一个任务完成后，才能开始下一个任务
-  // 3. 按原顺序收集每个任务的结果
-  // 4. 任意任务失败时，整体失败并停止后续任务
+  const results = [];
+  let index = 0;
+
+  return new Promise((resolve) => {
+    
+    function runNext() {
+      if (index === tasks.length) {
+        resolve(results);
+        return;
+      }
+
+      const currentIndex = index;
+      const task = tasks[currentIndex];
+      index++;
+
+      Promise.resolve(task())
+        .then((result) => {
+          results[currentIndex] = result;
+        })
+        .catch((error) => {
+          results[currentIndex] = error;
+        })
+        .finally(() => {
+          runNext();
+        });
+    }
+
+    runNext();
+  });
 }
 
 // ==================== 测试
