@@ -328,6 +328,16 @@
       "updatedAt": "2026-06-23"
     },
     {
+      "id": "request-concurrent",
+      "category": "async",
+      "groupId": "async",
+      "title": "手写请求并发执行",
+      "difficulty": "medium",
+      "tags": ["手写", "异步", "请求", "并发控制"],
+      "entry": "problems/request-concurrent/code.js",
+      "updatedAt": "2026-06-23"
+    },
+    {
       "id": "debounce",
       "category": "async",
       "groupId": "async",

@@ -9,8 +9,7 @@ function requestSerial(tasks) {
   const results = [];
   let index = 0;
 
-  return new Promise((resolve) => {
-    
+  return new Promise((resolve, reject) => {
     function runNext() {
       if (index === tasks.length) {
         resolve(results);
@@ -21,15 +20,14 @@ function requestSerial(tasks) {
       const task = tasks[currentIndex];
       index++;
 
-      Promise.resolve(task())
+      Promise.resolve()
+        .then(() => task())
         .then((result) => {
           results[currentIndex] = result;
+          runNext();
         })
         .catch((error) => {
-          results[currentIndex] = error;
-        })
-        .finally(() => {
-          runNext();
+          reject(error);
         });
     }
 
