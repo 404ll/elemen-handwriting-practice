@@ -41,6 +41,12 @@
       "title": "React",
       "description": "React 性能与列表渲染相关题目",
       "order": 70
+    },
+    {
+      "id": "regex",
+      "title": "正则处理",
+      "description": "真实项目里的字符串清洗、格式化与兜底规则",
+      "order": 80
     }
   ],
   "problems": [
@@ -347,6 +353,18 @@
       "entry": "problems/debounce/code.js",
       "article": "problems/debounce/article.md",
       "updatedAt": "2026-06-10"
+    },
+    {
+      "id": "seo-slug-normalize",
+      "collection": "work",
+      "category": "function",
+      "groupId": "regex",
+      "title": "SEO slug 正则清洗",
+      "difficulty": "easy",
+      "tags": ["正则", "SEO", "字符串"],
+      "entry": "problems/seo-slug-normalize/code.js",
+      "article": "problems/seo-slug-normalize/article.md",
+      "updatedAt": "2026-06-26"
     }
   ]
 }
