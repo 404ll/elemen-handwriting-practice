@@ -401,6 +401,16 @@
       "tags": ["CSS", "布局", "浮动"],
       "entry": "problems/css-holy-grail-layout/index.html",
       "updatedAt": "2026-06-27"
+    },
+    {
+      "id": "css-triangle",
+      "category": "css",
+      "groupId": "css",
+      "title": "CSS 三角形",
+      "difficulty": "easy",
+      "tags": ["CSS", "图形"],
+      "entry": "problems/css-triangle/code.css",
+      "updatedAt": "2026-06-27"
     }
   ]
 }

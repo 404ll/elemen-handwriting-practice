@@ -1,0 +1,67 @@
+/* CSS 三角形 */
+
+/* 1. 向上三角形 */
+.triangle-up {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 80px solid #2563eb;
+}
+
+/* 2. 向下三角形 */
+.triangle-down {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 80px solid #2563eb;
+}
+
+/* 3. 向左三角形 */
+.triangle-left {
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-right: 80px solid #2563eb;
+}
+
+/* 4. 向右三角形 */
+.triangle-right {
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 80px solid #2563eb;
+}
+
+/* 5. 直角三角形 */
+.triangle-corner {
+  width: 0;
+  height: 0;
+  border-top: 80px solid #2563eb;
+  border-right: 80px solid transparent;
+}
+
+/* 6. 带边框的三角形 */
+.triangle-border {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-left: 52px solid transparent;
+  border-right: 52px solid transparent;
+  border-bottom: 82px solid #111827;
+}
+
+.triangle-border::after {
+  position: absolute;
+  top: 4px;
+  left: -48px;
+  width: 0;
+  height: 0;
+  border-left: 48px solid transparent;
+  border-right: 48px solid transparent;
+  border-bottom: 76px solid #ffffff;
+  content: "";
+}
