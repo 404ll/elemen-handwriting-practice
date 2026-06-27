@@ -391,6 +391,16 @@
       "tags": ["CSS", "布局"],
       "entry": "problems/css-two-column/index.html",
       "updatedAt": "2026-06-27"
+    },
+    {
+      "id": "css-holy-grail-layout",
+      "category": "css",
+      "groupId": "css",
+      "title": "CSS 圣杯布局",
+      "difficulty": "medium",
+      "tags": ["CSS", "布局", "浮动"],
+      "entry": "problems/css-holy-grail-layout/index.html",
+      "updatedAt": "2026-06-27"
     }
   ]
 }

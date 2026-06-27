@@ -1,0 +1,46 @@
+/* 圣杯布局 */
+
+/* 容器预留空间 */
+.container {
+  padding-left: 200px;
+  padding-right: 200px;
+  border: 2px solid #000000;
+}
+
+/* 三栏都要浮动 */
+.center,
+.left,
+.right {
+  float: left;
+  min-height: 200px;
+}
+
+/* 中间填满内容区域 */
+.center {
+  width: 100%;
+  background-color: #ca1c1c;
+}
+
+/* 左侧回到左边 */
+.left {
+  margin-left: -100%; /* 相对父元素 */
+  width: 200px;
+  position: relative;
+  left: -200px; /* 相对自身 */
+  background-color: #1c1cca;
+}
+
+.right {
+  width: 200px;
+  margin-left: -200px;
+  position: relative;
+  right: -200px;
+  background-color: #1cca1c;
+}
+
+/* 清除浮动 */
+.container::after {
+  content: "";
+  display: block;
+  clear: both;
+}
