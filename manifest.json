@@ -237,6 +237,17 @@
       "updatedAt": "2026-05-18"
     },
     {
+      "id": "use-state",
+      "category": "react",
+      "groupId": "react",
+      "title": "手写 useState",
+      "difficulty": "hard",
+      "tags": ["React", "Hooks", "闭包"],
+      "entry": "problems/use-state/code.js",
+      "article": "problems/use-state/article.md",
+      "updatedAt": "2026-06-27"
+    },
+    {
       "id": "parasitic-combine",
       "category": "oop",
       "groupId": "oop",
