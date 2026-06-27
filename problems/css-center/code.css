@@ -1,4 +1,4 @@
-// 1. flex
+/* 1. flex */
 /*
 .parent {
     display: flex;
@@ -7,7 +7,7 @@
 }
 */
 
-// 2. grid
+/* 2. grid */
 /*
 .parent {
     display: grid;
@@ -15,7 +15,7 @@
 }
 */
 
-// 3. absolute + transform
+/* 3. absolute + transform */
 /*
 .parent {
     position: relative;
@@ -29,7 +29,7 @@
 }
 */
 
-// 4. absolute + margin auto
+/* 4. absolute + margin auto */
 /*
 .parent {
     position: relative;
@@ -42,7 +42,7 @@
 }
 */
 
-// 5. table-cell
+/* 5. table-cell */
 /*
 .parent {
     display: table-cell;

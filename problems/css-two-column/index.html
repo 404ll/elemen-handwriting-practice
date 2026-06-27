@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS 两栏布局</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 24px;
+      color: #1f2937;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f5f7fb;
+    }
+
+    h1,
+    h2 {
+      margin: 0;
+      font-weight: 700;
+    }
+
+    h1 {
+      margin-bottom: 24px;
+      font-size: 28px;
+    }
+
+    h2 {
+      margin-bottom: 12px;
+      font-size: 18px;
+    }
+
+    .section {
+      margin-bottom: 28px;
+    }
+
+    .demo {
+      overflow: hidden;
+      margin-bottom: 12px;
+      border: 1px solid #d8dee9;
+      border-radius: 8px;
+      background: #ffffff;
+    }
+
+    .aside,
+    .main {
+      min-height: 96px;
+      padding: 16px;
+    }
+
+    .aside {
+      color: #ffffff;
+      background: #2563eb;
+    }
+
+    .main {
+      background: #e5e7eb;
+    }
+
+    .flex-layout {
+      display: flex;
+    }
+
+    .flex-layout .aside {
+      flex: 0 0 200px;
+    }
+
+    .flex-layout .main {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .grid-layout {
+      display: grid;
+      grid-template-columns: 200px minmax(0, 1fr);
+    }
+
+    .float-layout .aside {
+      float: left;
+      width: 200px;
+    }
+
+    .float-layout .main {
+      margin-left: 200px;
+    }
+
+    .float-layout::after {
+      display: block;
+      clear: both;
+      content: "";
+    }
+
+    pre {
+      overflow-x: auto;
+      margin: 0;
+      padding: 16px;
+      border-radius: 8px;
+      color: #e5e7eb;
+      background: #111827;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    code {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 16px;
+      }
+
+      .flex-layout {
+        display: block;
+      }
+
+      .grid-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .float-layout .aside {
+        float: none;
+        width: auto;
+      }
+
+      .float-layout .main {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS 两栏布局</h1>
+
+  <section class="section">
+    <h2>1. Flex：左侧固定，右侧自适应</h2>
+    <div class="demo flex-layout">
+      <aside class="aside">左侧 200px</aside>
+      <main class="main">右侧自适应</main>
+    </div>
+    <pre><code>.layout {
+  display: flex;
+}
+
+.left {
+  flex: 0 0 200px;
+}
+
+.right {
+  flex: 1;
+  min-width: 0;
+}</code></pre>
+  </section>
+
+  <section class="section">
+    <h2>2. Grid：左侧固定，右侧自适应</h2>
+    <div class="demo grid-layout">
+      <aside class="aside">左侧 200px</aside>
+      <main class="main">右侧自适应</main>
+    </div>
+    <pre><code>.layout {
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr);
+}</code></pre>
+  </section>
+
+  <section class="section">
+    <h2>3. Float：左侧固定，右侧自适应</h2>
+    <div class="demo float-layout">
+      <aside class="aside">左侧 200px</aside>
+      <main class="main">右侧自适应</main>
+    </div>
+    <pre><code>.left {
+  float: left;
+  width: 200px;
+}
+
+.right {
+  margin-left: 200px;
+}
+
+.layout::after {
+  display: block;
+  clear: both;
+  content: "";
+}</code></pre>
+  </section>
+
+  <section class="section">
+    <h2>4. 响应式：窄屏变单列</h2>
+    <pre><code>@media (max-width: 768px) {
+  .layout {
+    display: block;
+    grid-template-columns: 1fr;
+  }
+
+  .left,
+  .right {
+    width: auto;
+    margin-left: 0;
+  }
+}</code></pre>
+  </section>
+</body>
+</html>

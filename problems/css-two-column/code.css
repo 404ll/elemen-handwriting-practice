@@ -1,0 +1,101 @@
+/* CSS 两栏布局常见写法 */
+
+/* 1. 左侧固定宽度，右侧自适应 - flex */
+/*
+.layout {
+  display: flex;
+}
+
+.left {
+  flex: 0 0 200px;
+}
+
+.right {
+  flex: 1;
+  min-width: 0;
+}
+*/
+
+/* 2. 左侧固定宽度，右侧自适应 - grid */
+/*
+.layout {
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr);
+}
+*/
+
+/* 3. 左侧固定宽度，右侧自适应 - float */
+/*
+.left {
+  float: left;
+  width: 200px;
+}
+
+.right {
+  margin-left: 200px;
+}
+
+.layout::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+*/
+
+/* 4. 左侧固定宽度，右侧自适应 - absolute */
+/*
+.layout {
+  position: relative;
+}
+
+.left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+}
+
+.right {
+  margin-left: 200px;
+}
+*/
+
+/* 5. 右侧固定宽度，左侧自适应 - flex */
+/*
+.layout {
+  display: flex;
+}
+
+.left {
+  flex: 1;
+  min-width: 0;
+}
+
+.right {
+  flex: 0 0 200px;
+}
+*/
+
+/* 6. 两列等宽 */
+/*
+.layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+*/
+
+/* 7. 响应式：窄屏变单列 */
+/*
+.layout {
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+*/

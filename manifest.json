@@ -47,6 +47,12 @@
       "title": "正则处理",
       "description": "真实项目里的字符串清洗、格式化与兜底规则",
       "order": 80
+    },
+    {
+      "id": "css",
+      "title": "CSS",
+      "description": "CSS 布局与样式常见写法",
+      "order": 90
     }
   ],
   "problems": [
@@ -365,6 +371,26 @@
       "entry": "problems/seo-slug-normalize/code.js",
       "article": "problems/seo-slug-normalize/article.md",
       "updatedAt": "2026-06-26"
+    },
+    {
+      "id": "css-center",
+      "category": "css",
+      "groupId": "css",
+      "title": "CSS 居中布局",
+      "difficulty": "easy",
+      "tags": ["CSS", "布局"],
+      "entry": "problems/css-center/code.css",
+      "updatedAt": "2026-06-27"
+    },
+    {
+      "id": "css-two-column",
+      "category": "css",
+      "groupId": "css",
+      "title": "CSS 两栏布局",
+      "difficulty": "easy",
+      "tags": ["CSS", "布局"],
+      "entry": "problems/css-two-column/index.html",
+      "updatedAt": "2026-06-27"
     }
   ]
 }
