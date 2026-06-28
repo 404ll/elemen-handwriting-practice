@@ -53,6 +53,12 @@
       "title": "CSS",
       "description": "CSS 布局与样式常见写法",
       "order": 90
+    },
+    {
+      "id": "ai-workflow",
+      "title": "AI 工作流",
+      "description": "AI Agent、数据管道与结构化处理链路",
+      "order": 100
     }
   ],
   "problems": [
@@ -422,6 +428,18 @@
       "tags": ["CSS", "图形"],
       "entry": "problems/css-triangle/code.css",
       "updatedAt": "2026-06-27"
+    },
+    {
+      "id": "search-agent-script",
+      "collection": "work",
+      "category": "async",
+      "groupId": "ai-workflow",
+      "title": "Search Agent Script 工作展示",
+      "difficulty": "medium",
+      "tags": ["AI", "Agent", "搜索", "数据流", "Zod"],
+      "entry": "problems/search-agent-script/code.js",
+      "article": "problems/search-agent-script/article.md",
+      "updatedAt": "2026-06-28"
     }
   ]
 }
