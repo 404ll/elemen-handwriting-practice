@@ -1,58 +1,84 @@
 /**
- * requestRetry：请求失败后自动重试
- * @param {Function} requestFn 每次执行请求的函数，返回 Promise
- * @param {number} retries 最大重试次数
- * @param {number} delay 每次重试前等待的时间，单位 ms
- * @returns {Promise<any>} 请求成功结果
+ * retry：为任意异步操作加入可配置的重试策略。
+ * @template T
+ * @param {() => Promise<T>} fn 每次尝试时重新执行的异步函数
+ * @param {{
+ *   retries?: number,
+ *   initialDelay?: number,
+ *   factor?: number,
+ *   maxDelay?: number,
+ *   jitter?: boolean,
+ *   shouldRetry?: (error: unknown) => boolean,
+ * }} [options]
+ * @returns {Promise<T>}
  */
+async function retry(fn, options = {}) {
+  const {
+    retries = 3,
+    initialDelay = 1000,
+    factor = 2,
+    maxDelay = 30_000,
+    jitter = true,
+    shouldRetry = () => true,
+  } = options;
 
-function requestRetry(requestFn, retries = 3, delay = 0) {
-  let count = 0;
+  let currentDelay = initialDelay;
 
-  return new Promise((resolve, reject) => {
-    function attempt(){
-      requestFn().then(resolve)
-      .catch((err) => {
+  // attempt = 0 是首次执行；retries 表示失败后额外允许尝试几次。
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    try {
+      return await fn();
+    } catch (error) {
+      const isLastAttempt = attempt === retries;
 
-        if(count >= retries) {
-          reject(err);
-          return;
-        }
+      if (isLastAttempt || !shouldRetry(error)) {
+        throw error;
+      }
 
-        const wait = delay * 2 ** count;// 指数退避
-        console.log(`${err.message}，等待 ${wait} ms`);
-        count++;
-        
-        setTimeout(attempt, wait);
-      })
+      const baseDelay = Math.min(currentDelay, maxDelay);
+      const waitTime = jitter
+        ? Math.min(baseDelay * (0.5 + Math.random()), maxDelay)
+        : baseDelay;
+
+      console.log(
+        `第 ${attempt + 1} 次尝试失败，${Math.round(waitTime)}ms 后重试`,
+      );
+
+      // await 会暂停这次 retry 调用；等待结束后，for 循环才进入下一次尝试。
+      await new Promise((resolve) => {
+        setTimeout(resolve, waitTime);
+      });
+
+      currentDelay = Math.min(baseDelay * factor, maxDelay);
     }
-    attempt();
-  })
+  }
+
+  throw new Error("Retry failed unexpectedly");
 }
 
-// ==================== 测试
+// ==================== 测试：前两次临时失败，第三次成功
 let count = 0;
 
 function mockRequest() {
-  return new Promise((resolve, reject) => {
-    count++;
-    console.log("当前 count =", count);
+  count++;
+  console.log("当前 count =", count);
 
-    setTimeout(() => {
-      if (count < 3) {
-        reject(new Error(`第 ${count} 次请求失败`));
-        return;
-      }
+  if (count < 3) {
+    return Promise.reject(new Error(`第 ${count} 次请求失败`));
+  }
 
-      resolve("请求成功");
-    }, 300);
-  });
+  return Promise.resolve("请求成功");
 }
 
-requestRetry(mockRequest, 3, 500)
-  .then((res) => {
-    console.log(res);
+retry(mockRequest, {
+  retries: 3,
+  initialDelay: 100,
+  jitter: false,
+  shouldRetry: (error) => error instanceof Error,
+})
+  .then((result) => {
+    console.log(result);
   })
-  .catch((err) => {
-    console.error(err);
+  .catch((error) => {
+    console.error(error);
   });

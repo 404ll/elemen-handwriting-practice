@@ -338,12 +338,12 @@
       "id": "request-retry",
       "category": "async",
       "groupId": "async",
-      "title": "手写请求重试机制",
+      "title": "手写可配置异步重试器 retry",
       "difficulty": "medium",
-      "tags": ["手写", "异步", "请求", "重试", "指数退避"],
+      "tags": ["手写", "异步", "请求", "重试", "指数退避", "抖动"],
       "entry": "problems/request-retry/code.js",
       "article": "problems/request-retry/note.md",
-      "updatedAt": "2026-06-23"
+      "updatedAt": "2026-07-22"
     },
     {
       "id": "request-serial",
