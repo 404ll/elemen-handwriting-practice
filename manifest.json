@@ -390,6 +390,17 @@
       "updatedAt": "2026-06-26"
     },
     {
+      "id": "format-number",
+      "category": "function",
+      "groupId": "regex",
+      "title": "千分位格式化数字",
+      "difficulty": "easy",
+      "tags": ["字符串", "正则", "数字"],
+      "entry": "problems/format-number/code.js",
+      "article": "problems/format-number/article.md",
+      "updatedAt": "2026-07-28"
+    },
+    {
       "id": "css-center",
       "category": "css",
       "groupId": "css",
